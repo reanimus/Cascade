@@ -10,4 +10,4 @@ None yet! Cascade is currently in more of a planning/experimental phase. This li
 *TODO: Add build instructions!*
 
 ## License
-Cascade is released under the MIT License. See <License.md>
+Cascade is released under the MIT License. See  [LICENSE.md](https://github.com/reanimus/Cascade/blob/master/LICENSE.md).
