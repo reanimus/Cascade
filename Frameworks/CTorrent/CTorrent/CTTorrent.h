@@ -34,11 +34,13 @@ typedef enum CTTorrentState CTTorrentState;
     uint64_t uploaded;
     uint64_t ratio;
     NSInteger peers;
+    NSInteger priority;
     NSInteger seedingPeers;
     NSInteger leechingPeers;
     NSInteger inactivePeers;
     NSString *path;
     NSString *error;
+    NSString *label;
     BOOL isDirectory;
     NSArray *trackers;
     NSArray *files;
@@ -53,15 +55,18 @@ typedef enum CTTorrentState CTTorrentState;
 @property uint64_t uploaded;
 @property uint64_t ratio;
 @property NSInteger peers;
+@property NSInteger priority;
 @property NSInteger leechingPeers;
 @property NSInteger seedingPeers;
 @property NSInteger inactivePeers;
 @property (retain) NSString *path;
+@property (retain) NSString *label;
 @property (retain) NSString *error;
 @property BOOL isDirectory;
 @property (retain) NSArray *trackers;
 @property (retain) NSArray *files;
 @property CTTorrentState state;
 
+-(id)initWithBackend: (NSObject *)b withGUID:(NSString *) g;
 
 @end

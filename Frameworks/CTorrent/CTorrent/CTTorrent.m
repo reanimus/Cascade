@@ -12,7 +12,7 @@
 
 
 
-@synthesize guid, owner, up, size, down, downloaded, uploaded, ratio, peers, seedingPeers, leechingPeers, inactivePeers, path, error, isDirectory, trackers, files, state;
+@synthesize guid, owner, up, size, down, downloaded, uploaded, ratio, peers, seedingPeers, leechingPeers, inactivePeers, path, error, isDirectory, trackers, files, state, label, priority;
 
 -(id)init
 {
@@ -20,7 +20,7 @@
     // null input.
     return nil;
 }
--(id)initWithBackendInfo: (NSObject *)b :(NSString *) g
+-(id)initWithBackend: (NSObject *)b withGUID:(NSString *) g
 {
     self = [super init];
     if(self)
