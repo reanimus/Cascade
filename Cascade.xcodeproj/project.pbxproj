@@ -14,6 +14,7 @@
 		E2B208F7172ACA9A00367099 /* DBUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2B208F6172ACA9A00367099 /* DBUAppDelegate.m */; };
 		E2B208FA172ACA9A00367099 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B208F8172ACA9A00367099 /* MainMenu.xib */; };
 		E2E93F7D19096654004AF1A3 /* CTorrent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E93F5C19096550004AF1A3 /* CTorrent.framework */; };
+		E2E93F98190969FA004AF1A3 /* XMLRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E93F93190969ED004AF1A3 /* XMLRPC.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,27 @@
 			remoteGlobalIDString = E2838B8916DE911400D67075;
 			remoteInfo = CTorrent;
 		};
+		E2E93F92190969ED004AF1A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2E93F8C190969ED004AF1A3 /* XMLRPC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = XMLRPC;
+		};
+		E2E93F94190969ED004AF1A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2E93F8C190969ED004AF1A3 /* XMLRPC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 903B0DB612F7574800BD6E09;
+			remoteInfo = libXMLRPC;
+		};
+		E2E93F96190969ED004AF1A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E2E93F8C190969ED004AF1A3 /* XMLRPC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0799AF030F6721FF00B71B22;
+			remoteInfo = XMLRPCUnitTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +69,8 @@
 		E2B208F5172ACA9A00367099 /* DBUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBUAppDelegate.h; sourceTree = "<group>"; };
 		E2B208F6172ACA9A00367099 /* DBUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBUAppDelegate.m; sourceTree = "<group>"; };
 		E2B208F9172ACA9A00367099 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		E2D6603D172ACB55009AA53C /* Cascade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Cascade.entitlements; sourceTree = "<group>"; };
 		E2E93F5719096550004AF1A3 /* CTorrent.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CTorrent.xcodeproj; path = CTorrent/CTorrent.xcodeproj; sourceTree = "<group>"; };
+		E2E93F8C190969ED004AF1A3 /* XMLRPC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XMLRPC.xcodeproj; path = xmlrpc/XMLRPC.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2E93F98190969FA004AF1A3 /* XMLRPC.framework in Frameworks */,
 				E2E93F7D19096654004AF1A3 /* CTorrent.framework in Frameworks */,
 				E2B208E4172ACA9A00367099 /* Cocoa.framework in Frameworks */,
 			);
@@ -67,6 +90,7 @@
 		E2718FC4172DA8050022298D /* Cascade Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E2E93F8C190969ED004AF1A3 /* XMLRPC.xcodeproj */,
 				E2E93F5719096550004AF1A3 /* CTorrent.xcodeproj */,
 			);
 			name = "Cascade Frameworks";
@@ -113,7 +137,6 @@
 		E2B208E9172ACA9A00367099 /* Cascade */ = {
 			isa = PBXGroup;
 			children = (
-				E2D6603D172ACB55009AA53C /* Cascade.entitlements */,
 				E2B208F5172ACA9A00367099 /* DBUAppDelegate.h */,
 				E2B208F6172ACA9A00367099 /* DBUAppDelegate.m */,
 				E2B208F8172ACA9A00367099 /* MainMenu.xib */,
@@ -138,6 +161,16 @@
 			isa = PBXGroup;
 			children = (
 				E2E93F5C19096550004AF1A3 /* CTorrent.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E2E93F8D190969ED004AF1A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E2E93F93190969ED004AF1A3 /* XMLRPC.framework */,
+				E2E93F95190969ED004AF1A3 /* libXMLRPC.a */,
+				E2E93F97190969ED004AF1A3 /* XMLRPCUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +208,11 @@
 				TargetAttributes = {
 					E2B208DF172ACA9A00367099 = {
 						DevelopmentTeam = E4J8VRJPWC;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -194,6 +232,10 @@
 					ProductGroup = E2E93F5819096550004AF1A3 /* Products */;
 					ProjectRef = E2E93F5719096550004AF1A3 /* CTorrent.xcodeproj */;
 				},
+				{
+					ProductGroup = E2E93F8D190969ED004AF1A3 /* Products */;
+					ProjectRef = E2E93F8C190969ED004AF1A3 /* XMLRPC.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -208,6 +250,27 @@
 			fileType = wrapper.framework;
 			path = CTorrent.framework;
 			remoteRef = E2E93F5B19096550004AF1A3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2E93F93190969ED004AF1A3 /* XMLRPC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XMLRPC.framework;
+			remoteRef = E2E93F92190969ED004AF1A3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2E93F95190969ED004AF1A3 /* libXMLRPC.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXMLRPC.a;
+			remoteRef = E2E93F94190969ED004AF1A3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E2E93F97190969ED004AF1A3 /* XMLRPCUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XMLRPCUnitTests.octest;
+			remoteRef = E2E93F96190969ED004AF1A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -333,7 +396,7 @@
 		E2B208FE172ACA9A00367099 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Cascade/Cascade.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cascade/Cascade-Prefix.pch";
@@ -346,7 +409,7 @@
 		E2B208FF172ACA9A00367099 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Cascade/Cascade.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Cascade/Cascade-Prefix.pch";
