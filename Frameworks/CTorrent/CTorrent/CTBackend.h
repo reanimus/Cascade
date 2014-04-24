@@ -18,15 +18,15 @@
 -(id) initWithOptions: (NSDictionary *) options;
 -(CTTorrentState) getState:(CTTorrent *) torrent;
 -(NSArray *) listTorrents;
--(void) pauseTorrent:(CTTorrent *) torrent;
--(void) resumeTorrent:(CTTorrent *) torrent;
--(void) stopTorrent:(CTTorrent *) torrent;
--(void) startTorrent:(CTTorrent *) torrent;
--(void) setPriority:(NSInteger) prio forTorrent: (CTTorrent *)torrent;
--(void) setLabel:(NSString *) label forTorrent: (CTTorrent *)torrent;
--(void) addTorrentFromURL: (NSString *) URL withLabel:(NSString *)label withPriority:(NSInteger)prio;
--(void) addTorrentFromFile: (NSString *) path withLabel:(NSString *)label withPriority:(NSInteger)prio;
--(void) terminate;
+-(bool) pauseTorrent:(CTTorrent *) torrent;
+-(bool) resumeTorrent:(CTTorrent *) torrent;
+-(bool) stopTorrent:(CTTorrent *) torrent;
+-(bool) startTorrent:(CTTorrent *) torrent;
+-(bool) setPriority:(NSInteger) prio forTorrent: (CTTorrent *)torrent;
+-(bool) setLabel:(NSString *) label forTorrent: (CTTorrent *)torrent;
+-(bool) addTorrentFromURL: (NSString *) URL withLabel:(NSString *)label withPriority:(NSInteger)prio;
+-(bool) addTorrentFromFile: (NSString *) path withLabel:(NSString *)label withPriority:(NSInteger)prio;
+-(bool) terminate;
 
 
 @end
